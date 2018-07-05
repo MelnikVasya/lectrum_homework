@@ -1,6 +1,9 @@
 // Core
-import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
+import React, { Component } from "react";
+import { hot } from "react-hot-loader";
+
+// Components
+import Scheduler from "components/Scheduler";
 
 @hot(module)
 export default class App extends Component {
@@ -8,16 +11,16 @@ export default class App extends Component {
         return (
             <h1
                 style = { {
-                    display:        'flex',
-                    minHeight:      '100vh',
-                    justifyContent: 'center',
-                    alignItems:     'center',
+                    display:        "flex",
+                    minHeight:      "100vh",
+                    justifyContent: "center",
+                    alignItems:     "center",
                     fontSize:       32,
                     fontWeight:     700,
-                    color:          'snow',
-                    userSelect:     'none',
+                    color:          "snow",
+                    userSelect:     "none",
                 } }>
-                Персональный проект: стартовая точка
+                <Scheduler />
             </h1>
         );
     }

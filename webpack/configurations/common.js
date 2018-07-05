@@ -32,9 +32,10 @@ export const generateCommonConfiguration = () => {
         setupFavicon(),
         setupStyledReporting(),
         initializeEnvVariables({
-            __ENV__:  JSON.stringify(BUILD_ENV),
-            __DEV__:  BUILD_ENV === 'development',
-            __PROD__: BUILD_ENV === 'production',
+            LECTRUM_TOKEN: JSON.stringify(process.env.LECTRUM_TOKEN),
+            __ENV__:       JSON.stringify(BUILD_ENV),
+            __DEV__:       BUILD_ENV === 'development',
+            __PROD__:      BUILD_ENV === 'production',
         }),
         {
             entry: {

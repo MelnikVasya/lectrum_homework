@@ -1,12 +1,10 @@
 // Core
-import React, { Component } from 'react';
+import React from "react";
 
 // Instruments
-import Styles from './styles.m.css';
+import Styles from "./styles.m.css";
 
-export default class Spinner extends Component {
-    render () {
+const Spinner = ({ isSpinning }) =>
+    isSpinning && <div className = { Styles.spinner } />;
 
-        return <div className = { Styles.spinner } />;
-    }
-}
+export default Spinner;
